@@ -1,0 +1,175 @@
+{
+    "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_cm:1",
+    "@type": "CapabilityModel",
+    "implements": [
+        {
+            "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_cm:gch18jeg:1",
+            "@type": "InterfaceInstance",
+            "displayName": {
+                "en": "Connected Coffee Maker"
+            },
+            "name": "ConnectedCoffeeMaker_if",
+            "schema": {
+                "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:1",
+                "@type": "Interface",
+                "displayName": {
+                    "en": "Coffee Maker Interface"
+                },
+                "contents": [
+                    {
+                        "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:WaterTemperature:1",
+                        "@type": [
+                            "Telemetry",
+                            "SemanticType/Temperature"
+                        ],
+                        "displayName": {
+                            "en": "Water Temperature"
+                        },
+                        "name": "WaterTemperature",
+                        "displayUnit": {
+                            "en": "Celsius"
+                        },
+                        "schema": "double",
+                        "unit": "Units/Temperature/celsius"
+                    },
+                    {
+                        "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:AirHumidity:1",
+                        "@type": [
+                            "Telemetry",
+                            "SemanticType/Humidity"
+                        ],
+                        "displayName": {
+                            "en": "Air Humidity"
+                        },
+                        "name": "AirHumidity",
+                        "displayUnit": {
+                            "en": "%"
+                        },
+                        "schema": "integer",
+                        "unit": "Units/Humidity/percent"
+                    },
+                    {
+                        "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:Brewing:1",
+                        "@type": [
+                            "Telemetry",
+                            "SemanticType/State"
+                        ],
+                        "displayName": {
+                            "en": "Brewing"
+                        },
+                        "name": "Brewing",
+                        "schema": {
+                            "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:Brewing:ukyropau:1",
+                            "@type": "Enum",
+                            "valueSchema": "string",
+                            "enumValues": [
+                                {
+                                    "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:Brewing:ukyropau:Brewing:1",
+                                    "@type": "EnumValue",
+                                    "displayName": {
+                                        "en": "Brewing"
+                                    },
+                                    "enumValue": "brewing",
+                                    "name": "Brewing"
+                                },
+                                {
+                                    "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:Brewing:ukyropau:NotBrewing:1",
+                                    "@type": "EnumValue",
+                                    "displayName": {
+                                        "en": "Not Brewing"
+                                    },
+                                    "enumValue": "notbrewing",
+                                    "name": "NotBrewing"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:CupDetected:1",
+                        "@type": [
+                            "Telemetry",
+                            "SemanticType/State"
+                        ],
+                        "displayName": {
+                            "en": "Cup Detected"
+                        },
+                        "name": "CupDetected",
+                        "schema": {
+                            "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:CupDetected:eknxwzoxs:1",
+                            "@type": "Enum",
+                            "valueSchema": "string",
+                            "enumValues": [
+                                {
+                                    "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:CupDetected2:twuxgg9v:Detected:1",
+                                    "@type": "EnumValue",
+                                    "displayName": {
+                                        "en": "Detected"
+                                    },
+                                    "enumValue": "detected",
+                                    "name": "Detected"
+                                },
+                                {
+                                    "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:CupDetected2:twuxgg9v:NotDetected:1",
+                                    "@type": "EnumValue",
+                                    "displayName": {
+                                        "en": "Not Detected"
+                                    },
+                                    "enumValue": "notdetected",
+                                    "name": "NotDetected"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:OptimalTemperature:1",
+                        "@type": [
+                            "Property",
+                            "SemanticType/Temperature"
+                        ],
+                        "displayName": {
+                            "en": "Optimal Temperature"
+                        },
+                        "name": "OptimalTemperature",
+                        "writable": true,
+                        "schema": "double",
+                        "unit": "Units/Temperature/celsius"
+                    },
+                    {
+                        "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:DeviceWarrantyExpired:1",
+                        "@type": "Property",
+                        "displayName": {
+                            "en": "Device Warranty Expired"
+                        },
+                        "name": "DeviceWarrantyExpired",
+                        "schema": "boolean"
+                    },
+                    {
+                        "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:SetMaintenanceMode:1",
+                        "@type": "Command",
+                        "commandType": "synchronous",
+                        "displayName": {
+                            "en": "Set Maintenance Mode"
+                        },
+                        "name": "SetMaintenanceMode"
+                    },
+                    {
+                        "@id": "urn:coffeeMakerContoso:ConnectedCoffeeMaker_if:StartBrewing:1",
+                        "@type": "Command",
+                        "commandType": "synchronous",
+                        "displayName": {
+                            "en": "Start Brewing"
+                        },
+                        "name": "StartBrewing"
+                    }
+                ]
+            }
+        }
+    ],
+    "displayName": {
+        "en": "Connected Coffee Maker"
+    },
+    "contents": [],
+    "@context": [
+        "http://azureiot.com/v1/contexts/IoTModel.json"
+    ]
+}
