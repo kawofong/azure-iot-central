@@ -6,6 +6,12 @@ Adopted from Microsoft Learn IoT learning module [Monitor and manage your coffee
 
 - [Coffee Maker Device Code](./coffeeMaker.js)
 
+## References
+
+- [Azure IoT Central concepts and features](./doc/concepts.md)
+
+- [Azure IoT Central | Application Templates](https://docs.microsoft.com/en-us/azure/iot-central/core/concepts-app-templates)
+
 ---
 
 ### PLEASE NOTE FOR THE ENTIRETY OF THIS REPOSITORY AND ALL ASSETS
